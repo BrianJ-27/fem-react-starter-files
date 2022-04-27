@@ -1,0 +1,36 @@
+// **************************************
+// THEME COLOR MAP
+// **************************************
+$colors: (
+  // Primary Text Color
+  primary: (
+    text: hsl(238, 29%, 16%)
+  ),
+  // Secondary Text Color
+  secondary: (
+    text: hsl(14, 88%, 65%)
+  ),
+  
+  // Background Gradient One
+  bg-gradient-1: (
+    300: hsl(240, 73%, 65%)
+  ),
+
+  // Background Gradient Two
+  bg-gradient-2: (
+    300: hsl(273, 75%, 66%)
+  ),
+
+  // Divider Color
+  divider: (
+    300: hsl(240, 5%, 91%)
+  ),
+  // Neutral Text Colors
+  text: (
+    normal: hsl(240, 6%, 50%),
+    dark: hsl(237, 12%, 33%)
+  ),
+  light: (
+    normal: hsl(255, 100%, 100%),
+  ),
+);

@@ -1,0 +1,50 @@
+// **************************************
+// LAYOUT STYLES
+// **************************************
+@use "../utilities" as *;
+
+/*------BASE LAYOUT STYLES-----------*/
+.container {
+  max-width: var(--max-width);
+}
+
+/*------FLEXBOX LAYOUT STYLES-----------*/
+
+.flex__container {
+  @include flex_me($dir: column, $wrap: wrap);
+}
+
+/*------GRID LAYOUT STYLES-----------*/
+
+.grid__container {
+  @include grid_layout_container($grid-temp-col: 100%, $grid-temp-row: auto);
+}
+
+// Grid Area Items
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: navigation;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+//Main Content Grid Layout
+.main__grid--wrapper {
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}

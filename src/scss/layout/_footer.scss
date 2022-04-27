@@ -1,0 +1,36 @@
+// **************************************
+// FOOTER STYLES
+// **************************************
+@use "../utilities" as *;
+
+.footer {
+  background-color: black;
+
+  color: #fff;
+
+  &__title {
+    text-align: left;
+  }
+  &__subtitle {
+    text-align: left;
+  }
+  &__copy {
+    text-align: left;
+  }
+
+  &__nav {
+    @include flex_me();
+  }
+
+  &__nav-list {
+    @extend %ul-list-stle;
+  }
+
+  &__nav-item {
+    text-align: left;
+  }
+
+  &__nav-link {
+    @extend %link-properties;
+  }
+}

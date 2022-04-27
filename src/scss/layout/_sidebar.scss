@@ -1,0 +1,20 @@
+// **************************************
+// SIDEBAR (ASIDE) STYLES
+// **************************************
+
+// Aside Styles
+.sidebar {
+  background-color: lightcoral;
+
+  &__header {
+    text-align: left;
+  }
+
+  &__body {
+    text-align: left;
+  }
+
+  &__footer {
+    text-align: left;
+  }
+}

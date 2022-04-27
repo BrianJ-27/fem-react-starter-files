@@ -1,0 +1,97 @@
+// **************************************
+// MIXINS
+// **************************************
+
+/*
+Important reminders: 
+1) using the "Null" keyword allows us to pass optional parameters to our mixins without bloating our code
+2) using the "Null" keyword also means we don't have to worry about the order of our parameters. 
+3) mixins work best 
+*/
+
+@use "./globals" as *;
+@use "./breakpoints" as *;
+
+/*Vendor Prefix to any css property*/
+@mixin css3-prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+// Make a circled element
+@mixin roundy($dim: null, $border: null) {
+  height: $dim;
+  width: $dim;
+  border: $border;
+  border-radius: 50%;
+}
+
+// Text properties
+@mixin text-prop($size, $l-height: null, $f-weight: null, $color: null) {
+  font-size: $size;
+  line-height: $l-height;
+  font-weight: $f-weight;
+  color: $color;
+}
+
+//Create a flex container
+@mixin flex_me($dir: null, $wrap: null, $just: null, $vertAlign: null) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $vertAlign;
+  justify-content: $just;
+}
+
+// Create a grid layout container
+@mixin grid_layout_container($grid-temp-col: null, $grid-temp-row: null) {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: $grid-temp-col;
+  grid-template-rows: $grid-temp-row;
+  grid-template-areas:
+    "header"
+    "navigation"
+    "main";
+  @include mq("md") {
+    grid-template-columns: $grid-temp-col;
+    grid-template-rows: $grid-temp-row;
+    grid-template-areas:
+      "navigation header header"
+      "navigation main main"
+      "navigation main main"
+      "navigation main main"
+      "navigation main main"
+      "navigation main main";
+  }
+}
+
+// create simple grid container
+@mixin grid_container(
+  $grid-templ-col: null,
+  $grid-temp-row: null,
+  $grid-gap: null
+) {
+  display: grid;
+  grid-template-columns: $grid-temp-col;
+  grid-template-rows: $grid-temp-row;
+  gap: $grid-gap;
+}
+
+// Media Query
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  $sm: map-get($breakpoints, "sm");
+
+  @if $value < $sm {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}

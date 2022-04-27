@@ -1,0 +1,43 @@
+// **************************************
+// TYPOGRAPHY STYLES
+// **************************************
+@use "../utilities" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fp-font-main);
+}
+
+//h1 styles
+.title__primary {
+  @extend %text-modules;
+  @include text-prop(
+    $size: clamp(1rem, 1.908rem + (0.0454 * 100vw), 3.5rem),
+    $f-weight: 400,
+
+  );
+}
+
+//h2 styles
+.title__secondary {
+  @include text-prop(
+    $size: clamp(1.5rem, 8vw, 3rem),
+    $f-weight: 500,
+  
+  );
+  @extend %text-modules;
+}
+
+/*----CONTENT STYLES----*/
+
+.content {
+  @include text-prop(
+    $size: clamp(1.25rem, 6vw, 2.5rem),
+    $f-weight: 800,
+ 
+  );
+}

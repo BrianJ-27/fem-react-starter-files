@@ -1,0 +1,32 @@
+// **************************************
+// GLOBAL VARIABLES
+// **************************************
+@use "./colors" as *;
+@use "./breakpoints" as *;
+@use "./fonts" as *;
+
+:root {
+  /*-----Color Custom Properties-----*/
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  /*-----Font Custom Properties-----*/
+  @each $font, $props in $font-love {
+    @each $prop, $value in $props {
+      --fp-#{$font}-#{$prop}: #{$value};
+    }
+  }
+
+  /*-----Layout Custom Properties-----*/
+  --max-width: 1200px;
+  --gutter: 15px;
+
+  /*-----Border Radius Custom Properties-----*/
+  --soft-curve: 5px;
+  --moderate-curve: 15px;
+  --hard-curve: 25px;
+  --full-circle: 50%;
+}
