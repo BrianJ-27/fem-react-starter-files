@@ -1,0 +1,22 @@
+// **************************************
+// index.scss
+// Main Sass file used to import partials
+// **************************************
+
+//use base partials here:
+/*
+Within this folder contains:
+- Normalize Styles for cross-browser compatibility
+- Reset Styles to remove any user agent browser styles
+- Base Selector Styles
+- Base Typography styles
+- Base Layout Styles for Flexbox & CSS Grid
+*/
+@use "base";
+
+// use state partials here:
+/*
+Within this foler only contains:
+- Styles for State Changes 
+*/
+@use "state";

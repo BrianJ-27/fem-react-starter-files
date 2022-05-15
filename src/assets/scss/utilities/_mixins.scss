@@ -12,23 +12,6 @@ Important reminders:
 @use "./globals" as *;
 @use "./breakpoints" as *;
 
-/*Vendor Prefix to any css property*/
-@mixin css3-prefix($prop, $value) {
-  -webkit-#{$prop}: #{$value};
-  -moz-#{$prop}: #{$value};
-  -ms-#{$prop}: #{$value};
-  -o-#{$prop}: #{$value};
-  #{$prop}: #{$value};
-}
-
-// Make a circled element
-@mixin roundy($dim: null, $border: null) {
-  height: $dim;
-  width: $dim;
-  border: $border;
-  border-radius: 50%;
-}
-
 // Text properties
 @mixin text-prop($size, $l-height: null, $f-weight: null, $color: null) {
   font-size: $size;

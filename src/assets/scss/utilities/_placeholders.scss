@@ -1,5 +1,5 @@
 // **************************************
-// Placeholders
+// PLACEHOLDERS
 // **************************************
 @use "./globals" as *;
 @use "./colors" as c;
@@ -7,8 +7,7 @@
 // Global Body Tag Styles
 %body-properties {
   font-family: var(--fp-font-main);
-  line-height: 1;
-  min-height: 100vh;
+  line-height: 1.4;
 }
 
 // Center Grid Content (For Component projects)

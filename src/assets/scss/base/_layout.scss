@@ -1,0 +1,40 @@
+// **************************************
+// LAYOUT STYLES
+// **************************************
+@use "../utilities" as *;
+
+/*------FLEXBOX LAYOUT STYLES-----------*/
+
+.flex__container {
+  @include flex_me($just: space-between, $vertAlign: center);
+}
+
+/*------GRID LAYOUT STYLES-----------*/
+
+.grid__container {
+  @extend %ctr-grid-content;
+  min-height: 100vh;
+}
+
+.main__grid--container {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(300px, 350px);
+  grid-template-areas:
+    "card_image"
+    "card_content";
+  @include mq("md") {
+    max-width: 62rem;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "card_image card_content";
+  }
+}
+
+.card_image {
+  grid-area: card_image;
+}
+
+.card_content {
+  grid-area: card_content;
+}
