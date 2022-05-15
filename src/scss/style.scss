@@ -3,14 +3,8 @@
 // Main Sass file used to import partials
 // **************************************
 
-
 //use base partials here:
-@use 'base';
+@use "base";
 
-// use layout partials here:
-@use 'layout';
-
-// use component partials here: 
-@use 'components';
-
-
+// use state partials here:
+@use "state";
