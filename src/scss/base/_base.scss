@@ -18,6 +18,14 @@ body {
   @extend %body-properties;
 }
 
+/* 
+**OPTIONAL**
+To keep component based projects from touching the sides of the viewport only*/
+body {
+  width: calc(100% - 1.5rem);
+  margin-inline: auto;
+}
+
 p {
   @extend %text-modules;
 }

@@ -45,41 +45,6 @@ Important reminders:
   justify-content: $just;
 }
 
-// Create a grid layout container
-@mixin grid_layout_container($grid-temp-col: null, $grid-temp-row: null) {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: $grid-temp-col;
-  grid-template-rows: $grid-temp-row;
-  grid-template-areas:
-    "header"
-    "navigation"
-    "main";
-  @include mq("md") {
-    grid-template-columns: $grid-temp-col;
-    grid-template-rows: $grid-temp-row;
-    grid-template-areas:
-      "navigation header header"
-      "navigation main main"
-      "navigation main main"
-      "navigation main main"
-      "navigation main main"
-      "navigation main main";
-  }
-}
-
-// create simple grid container
-@mixin grid_container(
-  $grid-templ-col: null,
-  $grid-temp-row: null,
-  $grid-gap: null
-) {
-  display: grid;
-  grid-template-columns: $grid-temp-col;
-  grid-template-rows: $grid-temp-row;
-  gap: $grid-gap;
-}
-
 // Media Query
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);
