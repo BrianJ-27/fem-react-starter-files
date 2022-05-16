@@ -12,10 +12,10 @@ Important reminders:
 //convert pixels to rem value
 $base-font-size: 1rem;
 @function px-to-rems($target, $context: $base-font-size) {
-  @return ($target / $context) * 1rem;
+  @return calc($target / $context) * 1rem;
 }
 
 //convert pixels to percentage value
 @function px-to-pc($target, $context: $max-width) {
-  @return ($target / $context) * 100%;
+  @return calc($target / $context) * 100%;
 }

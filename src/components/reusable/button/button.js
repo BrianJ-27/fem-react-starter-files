@@ -10,13 +10,15 @@ const Button = styled.button`
   padding: 0.25rem 1rem;
   letter-spacing: 1.1px;
   font-weight: 500;
+  cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:hover {
     background: palevioletred;
     color: white;
   }
-  &:focus {
-    outline: 1px dotted palevioletred;
+  &:focus,
+  &:focus-visible {
+    outline: 3px dotted black;
   }
 
   ${(props) =>
@@ -24,6 +26,7 @@ const Button = styled.button`
     css`
       background: blue;
       color: white;
+      border: 2px solid blue;
       &:hover {
         background-color: transparent;
         color: blue;
@@ -32,8 +35,8 @@ const Button = styled.button`
     `};
 `;
 
-const CustomButton = () => {
-  return <Button>This is my button</Button>;
+const CustomButton = ({ children, handleButton }) => {
+  return <Button onClick={() => handleButton()}> {children} </Button>;
 };
 
 export default CustomButton;
