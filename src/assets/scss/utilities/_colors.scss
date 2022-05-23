@@ -11,18 +11,18 @@ Color Wheel:
 $colors: (
   // Primary Project Color
   primary: (
-    300: hsl(238, 29%, 16%)
+    color: hsl(238, 29%, 16%)
   ),
   // Accent Project Color
   accent: (
-    300: hsl(14, 88%, 65%)
+    color: hsl(14, 88%, 65%)
   ),
-  // Background Gradient One
+  // Background Project Color
   bg: (
-    300: hsl(240, 73%, 65%)
+    color: hsl(240, 73%, 65%)
   ),
-  // Neutral Text Colors
+  // Text Project Color
   text: (
-    main: hsl(255, 0%, 0%)
+    color: hsl(255, 0%, 0%)
   )
 );
