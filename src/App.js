@@ -3,8 +3,10 @@ import Button from "./components/reusable/button/button";
 
 const App = () => {
   return (
-    <div className="App">
-      <main>These are my React Starter Files</main>
+    <div className="grid__container">
+      <main className="main__grid--container">
+        These are my React Starter Files
+      </main>
       <Button>Send Now!</Button>
       <Footer />
     </div>

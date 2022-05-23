@@ -16,6 +16,6 @@ const Image = styled.img`
     `};
 `;
 
-const CustomImage = () => <Image src="" alt="custom image" />;
+const CustomImage = ({ image_src, alt }) => <Image src={image_src} alt={alt} />;
 
 export default CustomImage;

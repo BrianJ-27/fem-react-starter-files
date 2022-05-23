@@ -4,8 +4,8 @@ import styled, { css } from "styled-components";
 const Button = styled.button`
   background: transparent;
   border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
+  border: 2px solid darkblue;
+  color: darkblue;
   margin: 0 1rem;
   padding: 0.25rem 1rem;
   letter-spacing: 1.1px;
@@ -13,7 +13,7 @@ const Button = styled.button`
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:hover {
-    background: palevioletred;
+    background: darkblue;
     color: white;
   }
   &:focus,

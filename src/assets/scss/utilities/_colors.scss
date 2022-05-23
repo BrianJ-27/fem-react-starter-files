@@ -1,36 +1,28 @@
 // **************************************
 // THEME COLOR MAP
 // **************************************
+/*
+Color Wheel:
+  Black: hsl(255, 0%, 0%)
+  Dark Grey: hsl(237, 12%, 33%)
+  Grey: hsl(240, 6%, 50%)
+  White: hsl(255, 100%, 100%)
+*/
 $colors: (
-  // Primary Text Color
+  // Primary Project Color
   primary: (
-    text: hsl(238, 29%, 16%)
+    300: hsl(238, 29%, 16%)
   ),
-  // Secondary Text Color
-  secondary: (
-    text: hsl(14, 88%, 65%)
+  // Accent Project Color
+  accent: (
+    300: hsl(14, 88%, 65%)
   ),
-  
   // Background Gradient One
-  bg-gradient-1: (
+  bg: (
     300: hsl(240, 73%, 65%)
-  ),
-
-  // Background Gradient Two
-  bg-gradient-2: (
-    300: hsl(273, 75%, 66%)
-  ),
-
-  // Divider Color
-  divider: (
-    300: hsl(240, 5%, 91%)
   ),
   // Neutral Text Colors
   text: (
-    normal: hsl(240, 6%, 50%),
-    dark: hsl(237, 12%, 33%)
-  ),
-  light: (
-    normal: hsl(255, 100%, 100%),
-  ),
+    main: hsl(255, 0%, 0%)
+  )
 );

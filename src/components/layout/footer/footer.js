@@ -16,7 +16,7 @@ const CustomFooter = () => {
       </a>
       . Coded by{" "}
       <a href="#myname" rel="noopener">
-        Your Name Here
+        Brian Johnson
       </a>
       .
     </Footer>
