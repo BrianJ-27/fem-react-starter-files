@@ -5,7 +5,7 @@ const Footer = styled.footer``;
 
 const CustomFooter = () => {
   return (
-    <Footer class="attribution">
+    <Footer className="attribution">
       Challenge by{" "}
       <a
         href="https://www.frontendmentor.io?ref=challenge"

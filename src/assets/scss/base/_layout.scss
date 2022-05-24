@@ -6,7 +6,7 @@
 /*------FLEXBOX LAYOUT STYLES-----------*/
 
 .flex__container {
-  @include flex_me($just: space-between, $vertAlign: center);
+  @include flex_me($dir: column);
 }
 
 /*------GRID LAYOUT STYLES-----------*/
@@ -22,12 +22,6 @@
   grid-template-areas:
     "card_image"
     "card_content";
-  @include mq("md") {
-    max-width: 62rem;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "card_image card_content";
-  }
 }
 
 .card_image {

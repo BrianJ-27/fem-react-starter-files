@@ -1,13 +1,14 @@
 import Footer from "./components/layout/footer/footer";
-import Button from "./components/reusable/button/button";
+import Form from "./components/layout/form/form";
 
 const App = () => {
   return (
     <div className="grid__container">
       <main className="main__grid--container">
         These are my React Starter Files
+        <Form />
       </main>
-      <Button>Send Now!</Button>
+
       <Footer />
     </div>
   );
