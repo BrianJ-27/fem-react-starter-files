@@ -12,7 +12,7 @@
 .title__primary {
   @extend %text-modules;
   @include text-prop(
-    $size: clamp(1rem, 6vw, 3.5rem),
+    $size: clamp(1rem, 6vw, 1.5rem),
     $f-weight: 400,
     $color: var(--clr-text-color)
   );
@@ -21,7 +21,7 @@
 // h2 styles
 .title__secondary {
   @include text-prop(
-    $size: clamp(1.5rem, 8vw, 3rem),
+    $size: clamp(0.9rem, 8vw, 1.2rem),
     $f-weight: 500,
     $color: var(--clr-text-color)
   );
@@ -32,7 +32,7 @@
 // p styles
 .content {
   @include text-prop(
-    $size: clamp(1.25rem, 6vw, 2.5rem),
+    $size: clamp(0.78rem, 6vw, 1rem),
     $f-weight: 800,
     $color: var(--clr-text-color)
   );

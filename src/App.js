@@ -5,11 +5,10 @@ const App = () => {
   return (
     <div className="grid__container">
       <main className="main__grid--container">
-        These are my React Starter Files
+        These are my React FEM Starter Files
         <Form />
+        <Footer />
       </main>
-
-      <Footer />
     </div>
   );
 };
