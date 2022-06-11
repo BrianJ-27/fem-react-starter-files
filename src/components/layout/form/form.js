@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import Button from "../../reusable/button/button";
-import FormField from "../../reusable/form-field/form-field";
+import FormField from "../../reusable/input-field/input-field";
+import inputValues from "../../layout/form/inputData";
 import styled from "styled-components";
 
 const StyledForm = styled.form`
-  --clr-bg-color: hsl(147, 88%, 65%);
-  background-color: var(--clr-bg-color);
+  background-color: var(--clr-light-normal);
   border-radius: var(--soft-curve);
   padding: 1rem;
 `;
 
 const Form = () => {
+  // Set initial Form State values to empty string
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -18,6 +19,7 @@ const Form = () => {
     password: "",
   });
 
+  // Handles the onchange event when users type in values
   const handleUpdate = (field, { target }) => {
     setFormData({
       ...formData,
@@ -25,6 +27,7 @@ const Form = () => {
     });
   };
 
+  // Handles the action when user clicks on the form button and resets the form
   const handleSubmitForm = (event) => {
     event.preventDefault();
     alert(`Form Submission Details:
@@ -33,62 +36,49 @@ const Form = () => {
             ${formData.email}
             ${formData.password}
             `);
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+    });
+    console.log("form is reset");
   };
 
   const handleButton = () => {
-    console.log("Button is clicked");
+    console.log("Button was clicked");
   };
 
   return (
     <React.Fragment>
+      <Button onClick={() => handleButton()}>
+        <span className="content__btn">Try it free 7 days</span> then $20/mo.
+        thereafter
+      </Button>
       <StyledForm action="/index.html" method="get" onSubmit={handleSubmitForm}>
         <fieldset>
           <div className="flex__container">
-            <FormField
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={(e) => handleUpdate("firstName", e)}
-              placeholder="First Name"
-              label="First Name"
-              id="first_name"
-            />
-
-            <FormField
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={(e) => handleUpdate("lastName", e)}
-              placeholder="Last Name"
-              label="Last Name"
-              id="last_name"
-            />
-
-            <FormField
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={(e) => handleUpdate("email", e)}
-              placeholder="Email Address"
-              label="Email Address"
-              id="form_email"
-            />
-
-            <FormField
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={(e) => handleUpdate("password", e)}
-              placeholder="Password"
-              label="Password"
-              id="form_password"
-            />
-
-            <Button form_btn handleButton={handleButton}>
-              Claim your free trial
-            </Button>
+            {inputValues.map((inputValues) => (
+              <FormField
+                key={inputValues.formId}
+                type={inputValues.type}
+                name={inputValues.name}
+                placeholder={inputValues.placeholder}
+                value={formData[inputValues.value]}
+                onChange={(e) => handleUpdate(inputValues.name, e)}
+                label={inputValues.label}
+                aria-label={inputValues.aria_label}
+                id={inputValues.id}
+              />
+            ))}
+            <Button form_btn>Claim your free trial</Button>
           </div>
         </fieldset>
+
+        <p className="content__body">
+          By clicking the button, you are agreeing to our
+          <strong className="content__terms"> Terms and Services</strong>
+        </p>
       </StyledForm>
     </React.Fragment>
   );
